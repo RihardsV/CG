@@ -25,7 +25,7 @@ color bg_color = #ffffff;
 color fill_color = #ff6666;
 color track_color = #6666ff;
 
-int speed = 100;
+int speed = 500;
 final int FALSE = 0, TRUE = 1, MAYBE = -1;
   
 NeumannFill fl;

@@ -14,11 +14,15 @@ class NeumannFill {
   int[][] getNeighbors() {
     int x = pos[0];
     int y = pos[1];
-    int[][] nbs = new int[4][];
+    int[][] nbs = new int[8][];
     nbs[0] = new int[] { x - 1, y };
-    nbs[1] = new int[] { x, y - 1 };
-    nbs[2] = new int[] { x + 1, y };
-    nbs[3] = new int[] { x, y + 1 };
+    nbs[1] = new int[] { x - 1, y - 1 };
+    nbs[2] = new int[] { x, y - 1 };
+    nbs[3] = new int[] { x - 1, y + 1 };
+    nbs[4] = new int[] { x + 1, y };
+    nbs[5] = new int[] { x + 1, y + 1 };
+    nbs[6] = new int[] { x, y + 1 };
+    nbs[7] = new int[] { x + 1, y - 1 };
     return nbs;
   }
   
@@ -35,7 +39,7 @@ class NeumannFill {
     int[][] nbs = getNeighbors();
     
     // if we find a free pixel push it to the stack
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 8; i++) {
       int[] nb = nbs[i];
       if ( get(nb) == fg_color ) {
         trace.push(nb);

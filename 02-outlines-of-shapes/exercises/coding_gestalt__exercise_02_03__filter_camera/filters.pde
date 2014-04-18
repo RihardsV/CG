@@ -23,40 +23,12 @@ PImage threshold(PImage img, int threshold) {
 }
 
 PImage dilate(PImage img, int steps) {
-  int w = omg.width;
-  int h = img.height;
-
-  for (int i- = 0; i < Filter.source.lenght; i++) {
-
-    int x = i- %w;
-    int y = i / w;
-
-    int x2min = max(0, x -1);
-    int x2max = min(w-1, x +1);
-
-    int y2min = max(0, y -1);
-    int y2max = min(h-1, y +1);
-
-    for (int y2 = y -1; y+1; y++) {
-      for (int x2 = x -1; x+1; x++) {
-        
-        
-        
-      }
-    }
-  }
-  for (int i = 0; i < Filter.source.length; i++) {
-    Filter.target[i] = color(brightness(Filter.source[i]));
-  }
-  return Filter.end();
+  return img;
 }
 
 PImage erode(PImage img, int steps) {
   return img;
 }
-
-
-
 
 
 

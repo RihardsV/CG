@@ -7,7 +7,31 @@
 // * Use red() green() and blue() functions to get the pixel color components
 
 PImage red(PImage img) {
-  return img;
+
+  Timer.start();
+
+  // get image dimensions
+  int w = img.width;
+  int h = img.height;
+
+  // create a target image
+  PImage target = createImage(w, h, 30);
+
+
+
+  // let the pixel pushing begin!
+  for (int y = 0; y < h; y++) {
+    for (int x = 0; x < w; x++) {
+
+      // just copy the pixel from the source to the target
+      // this is where you do all the crazy per pixel operations
+      target.set(10, 20, img.get(10, 20));
+    }
+  }
+
+  Timer.stop("copy pixels easy");
+
+  return target;
 }
 
 PImage green(PImage img) {
@@ -15,9 +39,8 @@ PImage green(PImage img) {
 }
 
 PImage blue(PImage img) {
-  return img; 
+  return img;
 }
-
 
 
 

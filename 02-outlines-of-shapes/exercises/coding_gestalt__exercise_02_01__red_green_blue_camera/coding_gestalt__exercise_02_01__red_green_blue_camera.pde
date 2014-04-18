@@ -18,7 +18,7 @@
 //                                               //
 ///////////////////////////////////////////////////
 
-// (c) YOUR_NAME at Bauhaus-Uni Weimar
+// (c) Rihards Vitols at Bauhaus-Uni Weimar
 
 
 import processing.video.Capture;
