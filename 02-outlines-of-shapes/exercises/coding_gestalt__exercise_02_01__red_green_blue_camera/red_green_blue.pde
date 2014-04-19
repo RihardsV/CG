@@ -9,22 +9,24 @@
 PImage red(PImage img) {
 
   Timer.start();
+ 
 
+ 
   // get image dimensions
   int w = img.width;
   int h = img.height;
 
-  // create a target image
-  PImage target = createImage(w, h, RGB);
+    // create a target image
+    PImage target = createImage(w, h, RGB);
 
-  // let the pixel pushing begin!
-  for (int y = 0; y < h; y++) {
-    for (int x = 0; x < w; x++) {
-      // just copy the pixel from the source to the target
-      // this is where you do all the crazy per pixel operations
-      target.set(x, y, img.get(x, y));
+    // let the pixel pushing begin!
+    for (int y = 0; y < h; y++) {
+      for (int x = 0; x < w; x++) {
+        // just copy the pixel from the source to the target
+        // this is where you do all the crazy per pixel operations
+        target.set(x, y, img.get(x, y));
+      }
     }
-  }
   Timer.stop("copy pixels easy");
 
   return target;
@@ -37,7 +39,6 @@ PImage green(PImage img) {
 PImage blue(PImage img) {
   return img;
 }
-
 
 
 
