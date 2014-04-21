@@ -49,7 +49,7 @@ void draw() {
  
   // scale it up
   scale(zoom);
-  
+ 
   // get a snapshot from the camera
   PImage snap = cam.get();
 

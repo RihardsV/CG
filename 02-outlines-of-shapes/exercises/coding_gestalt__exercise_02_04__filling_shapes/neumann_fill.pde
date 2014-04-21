@@ -66,7 +66,7 @@ class NeumannFill {
  /*int[][] getNeighbors() {
     int x = pos[0];
     int y = pos[1];
-    int[][] nbs = new int[8][];
+    int[][] nbs = new int[7][];
     nbs[0] = new int[] {x - 1, y + 1};
     nbs[1] = new int[] {x, y + 1};
     nbs[2] = new int[] {x + 1, y + 1};
@@ -74,7 +74,7 @@ class NeumannFill {
     nbs[4] = new int[] {x + 1, y - 1};
     nbs[5] = new int[] {x, y - 1};
     nbs[6] = new int[] {x - 1, y - 1};
-    nbs[7] = new int[] {x - 1, y};
+    nbs[7] = new int[] {x -1, y};
     return nbs;
   }*/
   

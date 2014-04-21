@@ -45,12 +45,12 @@ void reset() {
     float x = random(r, width - r);
     float y = random(r, height - r);
     
-    rectMode(CENTER);
-    
+    //rectMode(CENTER);
+     
     fill(fg_color); noStroke();
-    rect(x, y, r, r);
+    ellipse(x, y, r, r);
     fill(bg_color);
-    rect(x, y, r/2, r/2);
+    ellipse(x, y, r/2, r/2);
     
   }
   
