@@ -25,9 +25,9 @@ PImage red(PImage img) {
       
       // just copy the pixel from the source to the target
       // this is where you do all the crazy per pixel operations
-      
       img2.pixels[y * w + x] = img.pixels[y * w + x];
-      img2.pixels[y * w + x] = color(255, int(green(img.pixels[y*w+x])), int(blue(img2.pixels[y*w+x])));
+     //img2.pixels[y * w + x] = color(255, int(green(img.pixels[y*w+x])), int(blue(img2.pixels[y*w+x])));
+      img2.pixels[y * w + x] = color(red(img.pixels[y * w + x]), 0, 0); // īstais variants
     } 
   }
 
