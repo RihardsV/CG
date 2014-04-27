@@ -1,11 +1,9 @@
 
-// jaatrod ka dabut pec krasas pixel kordinates
 // ka zimēt jaunu attelu izmantojo ieprieksejo kordinasu viduspunktu
 
 //Rihards Vitols
 
 PImage img;
-PImage outsk;
 int pC, pC2, pC3, pC4;
 //int x1, x2, x3;
 //int y1, y2, y3;
@@ -14,39 +12,25 @@ void setup() {
 
   size(800, 400, P2D);
 
-  img = loadImage("2.png");
-  outsk = createOutsk();
+  img = loadImage("2.png"); //or 
 }
 
-void draw(){
-  
+void draw() {
+
   image(img, 0, 0);
-  
-  image(outsk, 400,0);
-}
 
-PImage createOutsk() {
 
   int w = img.width, h = img.height;
   PImage img2 = createImage(w, h, RGB);
 
-  img.loadPixels();
-
-  for (int y = 0; y < h; y++) {
-    for (int x = 0; x < w; x++) {
-      img2.pixels[y * w + x] = img.pixels[y * w + x];
-    }
-  }
-
-  img2.updatePixels();
-  
   img2.loadPixels();
+
   for (int y = 0; y < h; y++) {
     for (int x = 0; x < w; x++) {
-      color pixc = img2.get(x, y);
-      color pixc2 = img2.get(x-3, y);
-      color pixc3 = img2.get(x+3, y);
-    
+
+      color pixc = img.get(x, y);
+      color pixc2 = img.get(x-3, y);
+      color pixc3 = img.get(x+3, y);
       pC = pixc - pixc2;
       pC2 = pixc - pixc3;
       //println(pixc);
@@ -78,12 +62,11 @@ PImage createOutsk() {
         rect(x, y, 1, 1);
       }
       //println("PC3--------------------", pC3);
-      
-      img2.pixels[y * w + x] = pC3;
+    
+      img2.pixels[y * w + x] = img.pixels[y * w + x];
     }
   }
-  
-  img2.updatePixels();
-  return img2;
-}
 
+  img2.updatePixels();
+  image (img2, width/2, 0);
+}
