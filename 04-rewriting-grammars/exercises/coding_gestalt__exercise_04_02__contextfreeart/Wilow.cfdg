@@ -1,6 +1,4 @@
 startshape PLANT
-CF::Symmetry = CF::Dihedral, 9, 1,2, 15 
-CF::Symmetry = CF::p11g, 4, 7, 9, 40
 CF::MinimumSize = 3
 
 shape PLANT
@@ -11,26 +9,25 @@ shape PLANT
 
 shape BOTH
 {
-	BL [rotate 10]
-	BL [rotate - 25]
-	BL [a -.7 sat 1 h 20]
-	BL [a -.7 sat 1 h 0]
+	BL [rotate 45]
+	BL [rotate  -35 flip 145]
+	BL [a -.7 sat 1 h 120-280]
 }
 
 shape EITHER
 rule {BL[rotate -35]}
 rule {BL[rotate 45]}
-rule{BL[]}
+rule{BL[rotate - 15 flip 90]}
 
 shape BL
 {
-	SQUARE [ a -.3  sat 1 b .25 h 360]
+	SQUARE [ a -.3  sat 1 b .25 h 30]
         SQUARE [b 1 x .2 size .8+1.2]
-	WL [size .95 y .8 flip 90] //kopejas ipasibas visam formam
+	WL [size .95 y .9 flip 90] //kopejas ipasibas visam formam
 }
 
 shape WL
-rule 8 {BL [ rotate randint(80, 10)]}
-rule {BOTH []}
+rule 8 {BL [ rotate randint(90, 25)]}
+rule {BOTH [flip 90]}
 rule {BL []}
 
