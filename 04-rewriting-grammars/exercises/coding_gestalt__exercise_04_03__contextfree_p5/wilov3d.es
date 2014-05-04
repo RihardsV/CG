@@ -1,13 +1,14 @@
-set maxobjects 100
-//set maxdepth 200
+set maxobjects 2800
 
-UZD1
-rule UZD1 w 3 {
-	{ x 1 rx 4 rz 0.7 ry 0.8 } UZD1
-	{ s 1 } box
+{ h 30 sat 0.6 ry 5 } zars
+{ h 30 sat 0.6 ry -35 rx 45 } zars
+
+rule zars w 100 {
+	box
+	{ y 1 ry 2 rx 1 a 0.99 s 0.98 } zars
 }
 
-rule UZD1 w 2 {
-	{ x 1 rx 1 rz 1.4 ry 0.2 } UZD1
-	{ s 1 } box
+rule zars w 2 {
+	zars
+	{ y 0.5 rz 5 rx 45 ry 170 a 0.9 s 0.96 } zars
 }

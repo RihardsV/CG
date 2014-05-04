@@ -17,7 +17,7 @@ shape BOTH
 shape EITHER
 rule {BL[rotate -35]}
 rule {BL[rotate 45]}
-rule{BL[rotate - 15 flip 90]}
+rule{BL[rotate - 15 ]}
 
 shape BL
 {
